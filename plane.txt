@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic Roadmap Dashboard</title>
+    <style>
+        :root {
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --primary: #2563eb;
+            --primary-light: #dbeafe;
+            --success: #10b981;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .dashboard {
+            width: 100%;
+            max-width: 800px;
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* Summary Progress Card */
+        .overall-card {
+            background: var(--primary-light);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .overall-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Roadmap Items */
+        .roadmap-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .roadmap-item {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.25rem;
+            background: var(--bg-card);
+        }
+
+        .item-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Interactive Controls */
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .controls label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        input[type="number"] {
+            width: 70px;
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Universal Progress Trackers */
+        .progress-track {
+            background-color: var(--border-color);
+            border-radius: 9999px;
+            height: 12px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            border-radius: 9999px;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .bg-blue { background-color: var(--primary); }
+        .bg-green { background-color: var(--success); }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+        <header>
+            <h1>Strategic Roadmap Tracker</h1>
+            <p class="subtitle">Amend values below to dynamically update milestone and macro progress</p>
+        </header>
+
+        <!-- Macro Progress Component -->
+        <div class="overall-card">
+            <div class="overall-header">
+                <span>Total Strategic Completion</span>
+                <span id="macroPercent">0%</span>
+            </div>
+            <div class="progress-track">
+                <div id="macroBar" class="progress-fill bg-green"></div>
+            </div>
+        </div>
+
+        <!-- Roadmap Items Loop -->
+        <div class="roadmap-list">
+            
+            <!-- Phase 1 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title">Phase 1: Infrastructure Expansion</span>
+                    <div class="controls">
+                        <label for="p1">Progress:</label>
+                        <input type="number" id="p1" class="progress-input" min="0" max="100" value="75">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p1Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title">Phase 2: Product Development</span>
+                    <div class="controls">
+                        <label for="p2">Progress:</label>
+                        <input type="number" id="p2" class="progress-input" min="0" max="100" value="40">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p2Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title">Phase 3: Market Launch & Scaling</span>
+                    <div class="controls">
+                        <label for="p3">Progress:</label>
+                        <input type="number" id="p3" class="progress-input" min="0" max="100" value="10">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p3Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = document.querySelectorAll('.progress-input');
+            
+            function calculateTotals() {
+                let grandTotal = 0;
+                
+                inputs.forEach(input => {
+                    let val = parseInt(input.value);
+                    
+                    // Validate bound thresholds (0 - 100)
+                    if (isNaN(val) || val < 0) val = 0;
+                    if (val > 100) val = 100;
+                    input.value = val;
+
+                    // Update independent roadmap bar
+                    const barId = `${input.id}Bar`;
+                    document.getElementById(barId).style.width = `${val}%`;
+                    
+                    grandTotal += val;
+                });
+
+                // Calculate cumulative average progress
+                const macroAverage = Math.round(grandTotal / inputs.length);
+                
+                // Update interface
+                document.getElementById('macroBar').style.width = `${macroAverage}%`;
+                document.getElementById('macroPercent').textContent = `${macroAverage}%`;
+            }
+
+            // Bind real-time input event listeners to all fields
+            inputs.forEach(input => {
+                input.addEventListener('input', calculateTotals);
+            });
+
+            // Initial render computation pass
+            calculateTotals();
+        });
+    </script>
+
+</body>
+</html>

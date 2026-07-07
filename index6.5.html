@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>መተግበሪያ ለመፍትሔ</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <header>
+            <h1>ዘመናዊ ቴክኖሎጂ በማቅረብና በመዘርጋት የኮሚሽኑን አገልግሎቶች ተደራሽነትን ማረጋገጥ</h1>
+            <p class="subtitle">ቴክኖሎጂ በማቅረብና በመዘርጋት</p>
+        </header>
+
+        <!-- Macro Progress Component -->
+        <div class="overall-card">
+            <div class="overall-header">
+                <span><a href="index6.html">የአደጋ መረጃ አገልግሎት 100% ተደራሽነትን ማረጋገጥ </a></span>
+                <span id="macroPercent">0%</span>
+            </div>
+            <div class="progress-track">
+                <div id="macroBar" class="progress-fill bg-green"></div>
+            </div>
+        </div>
+
+        <!-- Roadmap Items Loop -->
+        <div class="roadmap-list">
+            
+            <!-- Phase 1 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title">የአደጋ መረጃ ፕሮፋይል በቁጥር 1 ማዘጋጀት</span>
+                    <div class="controls">
+                        <label for="p1">ክንውን</label>
+                        <input type="number" id="p1" class="progress-input" min="0" max="100" value="0">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p1Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title">የአደጋ መረጃ ወደ ቋት (ዳታቤዝ) ወይም በሠንደይ ፍሬም 100% ማስገባት</span>
+                    <div class="controls">
+                        <label for="p2">ክንውን</label>
+                        <input type="number" id="p2" class="progress-input" min="0" max="100" value="00">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p2Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title">የአደጋ መረጃ ለሚጠይቅ አካል በማዘጋጀት 100% መመስጠት</span>
+                    <div class="controls">
+                        <label for="p3">ክንውን</label>
+                        <input type="number" id="p3" class="progress-input" min="0" max="100" value="00">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p3Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+            <!-- Phase 4 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title">የተተነተነ የአደጋ መረጃ ሠነድ ለሚመለከታቸው የስራ ክፍሎች 4 ማሰራጨት</span>
+                    <div class="controls">
+                        <label for="p4">ክንውን</label>
+                        <input type="number" id="p4" class="progress-input" min="0" max="100" value="00">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p4Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+            <!-- Phase 5 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title">በኮሚሽኑ የአይቲ ፖሊሲ መሰረት 48 የመረጃ ቅጂ መያዝ</span>
+                    <div class="controls">
+                        <label for="p5">ክንውን</label>
+                        <input type="number" id="p5" class="progress-input" min="0" max="100" value="00">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p5Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

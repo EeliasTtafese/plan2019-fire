@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>መተግበሪያ ለመፍትሔ</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <header>
+            <h1>የድህረ አደጋ ምላሽ አገልግሎቶች ተደራሽነትን ማሳደግ</h1>
+            <p class="subtitle">የድህረ አደጋ ምላሽ አገልግሎቶች ተደራሽነት</p>
+        </header>
+
+        <!-- Macro Progress Component -->
+        <div class="overall-card">
+            <div class="overall-header">
+                <span><a href="index10.html">የአደጋ ተጎጂና ድጋፍ ፈላጊዎችን የኑሮ መሰረት በመመለስ ከአደጋ እንዲያገግሙና በዘላቅነት መልሰው እንዲቋቋሙ በማድረግ ከ75% ወደ 76% አይበገሬ ማህበረሰብ መፍጠር(16)</a></span>
+                <span id="macroPercent">0%</span>
+            </div>
+            <div class="progress-track">
+                <div id="macroBar" class="progress-fill bg-green"></div>
+            </div>
+        </div>
+
+        <!-- Roadmap Items Loop -->
+        <div class="roadmap-list">
+            
+            <!-- Phase 1 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title">የአደጋ ተጎጂዎች የድህረ አደጋ ፍላጎት ጥናት 100% ማድረግ</span>
+                    <div class="controls">
+                        <label for="p1">ክንውን</label>
+                        <input type="number" id="p1" class="progress-input" min="0" max="100" value="00">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p1Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title">የአደጋ ተጎጂዎች መልሶ ግንባታና በዘላቂነት መልሶ ማቋቋም አዋጭነት ጥናት 100% ማድረግ</span>
+                    <div class="controls">
+                        <label for="p2">ክንውን</label>
+                        <input type="number" id="p2" class="progress-input" min="0" max="100" value="00">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p2Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title">በድህረ አደጋ ወቅት የአደጋ ተጎጂዎች ፓኬጅና ፕሮጀክት 100% ማዘጋጀትና ማቅረብ</span>
+                    <div class="controls">
+                        <label for="p3">ክንውን</label>
+                        <input type="number" id="p3" class="progress-input" min="0" max="100" value="00">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p3Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+            <!-- Phase 4 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title">የመልሶ ግንባታና ዘላቂ መልሶ ማቋቋም ፓኬጅ እና ፕሮጀክቶችን ትግበራ ክትትል ድጋፍ በ75% ማድረግ</span>
+                    <div class="controls">
+                        <label for="p4">ክንውን</label>
+                        <input type="number" id="p4" class="progress-input" min="0" max="100" value="00">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p4Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

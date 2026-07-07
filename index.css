@@ -1,0 +1,136 @@
+
+:root {
+    --bg-main: #fd1302;
+    --bg-card: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #25292e;
+    --border-color: #b0b2c0;
+    --primary: #081227;
+    --primary-light: #f2f4f8;
+    --success: #08af77;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0.15rem;
+    display: flex;
+    
+    justify-content: center;
+}
+
+.dashboard {
+    width: 100%;
+    max-width: 1150px;
+    background: var(--bg-card);
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 14px 10px 10px 0 rgb(0, 0, 100);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 0.9rem;
+}
+
+h1 {
+    font-size: 1.75rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Summary Progress Card */
+.overall-card {
+    background: var(--primary-light);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.overall-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Roadmap Items */
+.roadmap-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.roadmap-item {
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem;
+    background: var(--bg-card);
+}
+
+.item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.item-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Interactive Controls */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.controls label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+input[type="number"] {
+    width: 70px;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Universal Progress Trackers */
+.progress-track {
+    background-color: var(--border-color);
+    border-radius: 9999px;
+    height: 12px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 9999px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bg-blue { 
+    background-color: var(--primary);
+}
+.bg-green {
+    background-color: var(--success);
+}
+    

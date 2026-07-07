@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>መተግበሪያ ለመፍትሔ</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <header>
+            <h1>የዕቅድ ግብ አተገባበር</h1>
+            <p class="subtitle">ግብ አተገባበር</p>
+        </header>
+
+        <!-- Macro Progress Component -->
+        <div class="overall-card">
+            <div class="overall-header">
+                <span><a href="index.html">የስልጠና  አገልግሎት አሰጣጥ ዓቅም ማሳደግ</a></span>
+                <span id="macroPercent">0%</span>
+            </div>
+            <div class="progress-track">
+                <div id="macroBar" class="progress-fill bg-green"></div>
+            </div>
+        </div>
+
+        <!-- Roadmap Items Loop -->
+        <div class="roadmap-list">
+            
+            <!-- Phase 1 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title"><a href="index8.1.html">የስልጠና አገልግሎት አሰጣጥ ስታንዳርድን ከ60% ወደ 63% ማሳደግ</a></span>
+                    <div class="controls">
+                        <label for="p1">ክንውን</label>
+                        <input type="number" id="p1" class="progress-input" min="0" max="100" value="00">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p1Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title"><a href="index8.2.html">የጥናት አገልግሎትን ከ60% ወደ 62% ማሳደግ</a></span>
+                    <div class="controls">
+                        <label for="p2">ክንውን</label>
+                        <input type="number" id="p2" class="progress-input" min="0" max="100" value="00">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p2Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="roadmap-item">
+                <div class="item-info">
+                    <span class="item-title"><a href="index8.3.html">ለ2,000 የኮሚሽኑ ሠራተኞችና የውጭ ተገልጋዮች የስልጠና አገልግሎት መስጠት</a></span>
+                    <div class="controls">
+                        <label for="p3">ክንውን</label>
+                        <input type="number" id="p3" class="progress-input" min="0" max="100" value="00">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div id="p3Bar" class="progress-fill bg-blue"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
