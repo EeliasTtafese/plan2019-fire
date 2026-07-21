@@ -9,6 +9,9 @@
     --primary-light: #f2f4f8;
     --success: #08af77;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: system-ui, -apple-system, sans-serif;
